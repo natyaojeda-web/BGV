@@ -1,0 +1,1576 @@
+/* ==========================================================================
+   Calma y Serena Alma — Hoja de Estilos Oficial
+   Tipografías: Lora (títulos) & Nunito Sans (cuerpo)
+   ========================================================================== */
+
+:root {
+  --bg-crema: #FBF6EA;
+  --bg-crema-alt: #F5EBD3;
+  --bg-yellow: #F2DFA7;
+  --morado-oscuro: #3B2463;
+  --morado-footer: #2E1A4F;
+  --morado-tarjetas-oscuras: #4A2F75;
+  --morado-acento: #6B4A9E;
+  --lila-claro: #E5DAF2;
+  --texto-principal: #2E2440;
+  --texto-secundario: #4A3F5C;
+  --texto-suave: #5C516E;
+  --borde-tarjeta: #EADFC4;
+  --blanco: #FFFFFF;
+  --verde-btn: #1E7B47;
+  --verde-btn-hover: #176539;
+  --verde-btn-active: #124d2c;
+  --rojo-colgar: #C8423A;
+  
+  --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--texto-principal);
+  background-color: var(--bg-crema);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+/* ==========================================================================
+   Tipografía General
+   ========================================================================== */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--morado-oscuro);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--morado-acento);
+  margin-bottom: 14px;
+}
+
+.eyebrow-light {
+  color: var(--bg-yellow);
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.container-medium {
+  width: 100%;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.container-guarantee {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.container-highlight {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section {
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+
+.section-hero {
+  padding-top: 48px;
+  padding-bottom: 88px;
+}
+
+/* ==========================================================================
+   Botones (Todos Verdes #1E7B47)
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 9999px;
+  min-height: 52px;
+  padding: 16px 28px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.btn-primary {
+  background-color: var(--verde-btn);
+  color: var(--blanco);
+  border: 2px solid var(--verde-btn);
+}
+
+.btn-primary:hover {
+  background-color: var(--verde-btn-hover);
+  border-color: var(--verde-btn-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(30, 123, 71, 0.24);
+}
+
+.btn-primary:active {
+  background-color: var(--verde-btn-active);
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--verde-btn);
+  border: 2px solid var(--verde-btn);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(30, 123, 71, 0.08);
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+  background-color: rgba(30, 123, 71, 0.16);
+  transform: translateY(0);
+}
+
+.btn-nav {
+  font-size: 16px;
+  min-height: 44px;
+  padding: 10px 22px;
+}
+
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Tarjetas Genéricas
+   ========================================================================== */
+
+.card {
+  background-color: var(--blanco);
+  border: 1px solid var(--borde-tarjeta);
+  border-radius: 20px;
+  padding: 32px;
+}
+
+/* ==========================================================================
+   1. Barra Superior (Header)
+   ========================================================================== */
+
+.site-header {
+  background-color: var(--bg-crema);
+  border-bottom: 1px solid var(--borde-tarjeta);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.site-brand {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--morado-oscuro);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   2. Portada (Hero)
+   ========================================================================== */
+
+.hero-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.hero-title {
+  font-size: 52px;
+  color: var(--morado-oscuro);
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-left p {
+  font-size: 20px;
+  color: var(--texto-secundario);
+  margin-bottom: 20px;
+}
+
+.hero-benefits {
+  list-style: none;
+  margin: 28px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hero-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--morado-oscuro);
+}
+
+.hero-benefit-item svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--verde-btn);
+  margin-top: 3px;
+}
+
+.hero-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--texto-secundario);
+  margin: 24px 0 28px;
+  padding-left: 18px;
+  border-left: 3px solid var(--borde-tarjeta);
+}
+
+.hero-subnote {
+  font-size: 15px;
+  color: var(--texto-suave);
+  margin-top: 14px;
+}
+
+.hero-limit {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--morado-acento);
+  margin-top: 10px;
+}
+
+.hero-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-arch-image {
+  width: 100%;
+  max-width: 440px;
+  height: 520px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  box-shadow: 0 16px 36px rgba(59, 36, 99, 0.12);
+}
+
+/* ==========================================================================
+   3. Banda Gástrica Virtual (Fondo Morado Oscuro)
+   ========================================================================== */
+
+.section-banda {
+  background-color: var(--morado-oscuro);
+  color: var(--bg-crema);
+}
+
+.section-banda h2 {
+  font-size: 40px;
+  color: var(--bg-crema);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.banda-subtitle {
+  font-size: 20px;
+  color: var(--lila-claro);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.banda-text {
+  font-size: 19px;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.banda-highlight-box {
+  background-color: var(--bg-yellow);
+  color: var(--morado-footer);
+  border-radius: 24px;
+  padding: 36px;
+  margin: 40px 0 32px;
+}
+
+.banda-highlight-box h3 {
+  font-size: 26px;
+  color: var(--morado-footer);
+  margin-bottom: 16px;
+}
+
+.banda-highlight-box p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.banda-highlight-box .bold-takeaway {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.banda-data-box {
+  background-color: var(--morado-tarjetas-oscuras);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.banda-data-box p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--bg-crema);
+  margin-bottom: 16px;
+}
+
+.banda-data-box .sources {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--lila-claro);
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   4. Factores que Influyen en el Peso
+   ========================================================================== */
+
+.section-factores {
+  background-color: var(--bg-crema);
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-factores h2 {
+  font-size: 38px;
+  color: var(--morado-oscuro);
+  margin-bottom: 12px;
+}
+
+.section-factores .lead-p {
+  font-size: 18px;
+  color: var(--texto-secundario);
+}
+
+.factores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.factor-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.factor-card h3 {
+  font-size: 20px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--morado-acento);
+  margin-bottom: 16px;
+}
+
+.factor-card p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--texto-principal);
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.factor-note {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.factor-note-gray {
+  color: var(--texto-suave);
+}
+
+.factor-note-green {
+  color: var(--verde-btn);
+}
+
+.factor-card-featured {
+  background-color: var(--morado-oscuro);
+  color: var(--bg-crema);
+  border-color: var(--morado-oscuro);
+}
+
+.factor-card-featured h3 {
+  color: var(--bg-yellow);
+}
+
+.factor-card-featured p {
+  color: var(--bg-crema);
+}
+
+.factor-card-featured .factor-note {
+  color: var(--bg-yellow);
+}
+
+/* ==========================================================================
+   5. No te voy a decir qué comer & Marco Videollamada
+   ========================================================================== */
+
+.section-no-dietas {
+  background-color: var(--bg-crema-alt);
+}
+
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.no-dietas-content h2 {
+  font-size: 38px;
+  color: var(--morado-oscuro);
+  margin-bottom: 24px;
+}
+
+.no-dietas-content p {
+  font-size: 18px;
+  color: var(--texto-principal);
+  margin-bottom: 18px;
+}
+
+.no-dietas-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Marco de Videollamada (HTML & CSS puro) */
+.videocall-frame {
+  background-color: var(--morado-footer);
+  border-radius: 24px;
+  padding: 14px;
+  box-shadow: 0 20px 40px rgba(46, 26, 79, 0.22);
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.videocall-screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #1a0f2e;
+}
+
+.videocall-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 45% 40%;
+}
+
+.videocall-label {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background-color: rgba(20, 12, 36, 0.7);
+  backdrop-filter: blur(4px);
+  color: var(--blanco);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.videocall-pip {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 92px;
+  height: 116px;
+  background-color: #EDE3F7;
+  border: 2px solid var(--bg-crema);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.videocall-pip svg {
+  width: 42px;
+  height: 42px;
+  stroke: var(--morado-acento);
+}
+
+.videocall-pip-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4A2D78;
+  margin-top: 6px;
+}
+
+.videocall-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding-top: 14px;
+  padding-bottom: 4px;
+}
+
+.videocall-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--morado-tarjetas-oscuras);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-crema);
+  cursor: default;
+}
+
+.videocall-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.videocall-btn-end {
+  width: 52px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--rojo-colgar);
+  color: var(--blanco);
+}
+
+/* ==========================================================================
+   6. Transformaciones
+   ========================================================================== */
+
+.section-transformaciones {
+  background-color: var(--bg-crema);
+}
+
+.section-transformaciones h2 {
+  font-size: 38px;
+  color: var(--morado-oscuro);
+  margin-bottom: 12px;
+}
+
+.section-transformaciones .lead-p {
+  font-size: 18px;
+  color: var(--texto-secundario);
+  margin-bottom: 36px;
+}
+
+.transformaciones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.transformacion-card {
+  background-color: var(--blanco);
+  border: 1px solid var(--borde-tarjeta);
+  border-radius: 16px;
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.transformacion-antes {
+  flex: 1;
+  font-size: 18px;
+  color: var(--texto-suave);
+}
+
+.transformacion-flecha {
+  font-size: 26px;
+  line-height: 1;
+  color: var(--morado-acento);
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.transformacion-despues {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--morado-oscuro);
+}
+
+/* ==========================================================================
+   7. La Báscula
+   ========================================================================== */
+
+.section-bascula {
+  background-color: var(--bg-yellow);
+  text-align: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.section-bascula h2 {
+  font-size: 34px;
+  color: var(--morado-footer);
+  margin-bottom: 16px;
+}
+
+.section-bascula p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: #3A2F4C;
+}
+
+/* ==========================================================================
+   8. Cómo Funciona el Proceso
+   ========================================================================== */
+
+.section-proceso {
+  background-color: var(--bg-crema);
+}
+
+.section-proceso h2 {
+  font-size: 38px;
+  color: var(--morado-oscuro);
+  margin-bottom: 36px;
+}
+
+.proceso-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.proceso-card {
+  background-color: var(--blanco);
+  border: 1px solid var(--borde-tarjeta);
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.proceso-number {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--morado-acento);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.proceso-card h3 {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--morado-oscuro);
+  margin-bottom: 12px;
+}
+
+.proceso-card p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--texto-secundario);
+}
+
+.proceso-subnote {
+  font-size: 16px;
+  color: var(--texto-suave);
+  text-align: center;
+}
+
+/* ==========================================================================
+   9. Qué Incluye, Bonos y Precio (id="inscripcion")
+   ========================================================================== */
+
+.section-inscripcion {
+  background-color: var(--morado-oscuro);
+  color: var(--bg-crema);
+}
+
+.inscripcion-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.incluye-content h2 {
+  font-size: 38px;
+  color: var(--bg-yellow);
+  margin-bottom: 24px;
+}
+
+.incluye-list {
+  list-style: none;
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.incluye-item {
+  position: relative;
+  padding-left: 26px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--bg-crema);
+}
+
+.incluye-item::before {
+  content: "•";
+  position: absolute;
+  left: 6px;
+  top: 0;
+  color: var(--bg-yellow);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.bonos-title {
+  font-size: 28px;
+  color: var(--bg-yellow);
+  margin-bottom: 20px;
+}
+
+.bonos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bono-box {
+  background-color: var(--morado-tarjetas-oscuras);
+  border-radius: 14px;
+  padding: 20px 24px;
+}
+
+.bono-box h4 {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--blanco);
+  margin-bottom: 6px;
+}
+
+.bono-box p {
+  font-size: 16px;
+  color: var(--lila-claro);
+  line-height: 1.5;
+}
+
+/* Tarjeta de Precio */
+.precio-card {
+  background-color: var(--bg-crema);
+  color: var(--texto-principal);
+  border-radius: 24px;
+  padding: 36px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+}
+
+.precio-eyebrow {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--morado-acento);
+  margin-bottom: 12px;
+}
+
+.precio-amount {
+  font-family: var(--font-serif);
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--morado-oscuro);
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.precio-note {
+  font-size: 15px;
+  color: var(--texto-suave);
+  line-height: 1.45;
+  margin-bottom: 24px;
+}
+
+.precio-divider {
+  border: none;
+  border-top: 1px dashed #D8C9A6;
+  margin: 28px 0;
+}
+
+.colombia-section {
+  text-align: center;
+}
+
+.colombia-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--morado-oscuro);
+  margin-bottom: 8px;
+}
+
+.colombia-text {
+  font-size: 16px;
+  color: var(--texto-principal);
+  margin-bottom: 14px;
+}
+
+.llave-box {
+  background-color: var(--blanco);
+  border: 1px solid var(--borde-tarjeta);
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--morado-oscuro);
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+.qr-image {
+  width: 200px;
+  height: auto;
+  margin: 0 auto 16px;
+  border-radius: 8px;
+}
+
+.whatsapp-note {
+  font-size: 15px;
+  color: var(--texto-secundario);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.whatsapp-link {
+  color: var(--verde-btn);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.whatsapp-link:hover {
+  color: var(--verde-btn-hover);
+}
+
+.chat-first-link {
+  display: block;
+  text-align: center;
+  color: var(--verde-btn);
+  font-weight: 700;
+  font-size: 17px;
+  text-decoration: underline;
+  margin-bottom: 14px;
+}
+
+.chat-first-link:hover {
+  color: var(--verde-btn-hover);
+}
+
+.cupos-text {
+  text-align: center;
+  font-size: 15px;
+  color: var(--texto-suave);
+}
+
+/* ==========================================================================
+   10. Garantía
+   ========================================================================== */
+
+.section-garantia {
+  background-color: var(--bg-crema);
+}
+
+.garantia-box {
+  background-color: var(--blanco);
+  border: 2px solid var(--bg-yellow);
+  border-radius: 28px;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(59, 36, 99, 0.06);
+}
+
+.garantia-seal-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.garantia-seal {
+  width: 260px;
+  height: auto;
+}
+
+.garantia-content h2 {
+  font-size: 34px;
+  color: var(--morado-oscuro);
+  margin-bottom: 12px;
+}
+
+.garantia-highlight {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--morado-oscuro);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.garantia-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--texto-secundario);
+  margin-bottom: 16px;
+}
+
+.garantia-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   11. Testimonios
+   ========================================================================== */
+
+.section-testimonios {
+  background-color: var(--bg-crema-alt);
+}
+
+.section-testimonios h2 {
+  font-size: 38px;
+  color: var(--morado-oscuro);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.testimonio-card {
+  background-color: var(--blanco);
+  border: 1px solid var(--borde-tarjeta);
+  border-radius: 20px;
+  padding: 14px;
+  max-width: 340px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.video-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.img-testimonio-wrap {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f7f5f2;
+}
+
+.img-testimonio-wrap img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.testimonio-author {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--texto-suave);
+  margin-top: 14px;
+  padding-bottom: 4px;
+}
+
+.testimonios-disclaimer {
+  text-align: center;
+  font-size: 14px;
+  color: var(--texto-suave);
+}
+
+/* ==========================================================================
+   12. Para Quién Es
+   ========================================================================== */
+
+.section-para-quien {
+  background-color: var(--bg-crema);
+}
+
+.para-quien-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.para-quien-card {
+  background-color: var(--blanco);
+  border: 1px solid var(--borde-tarjeta);
+  border-radius: 20px;
+  padding: 36px;
+}
+
+.para-quien-card h3 {
+  font-size: 28px;
+  color: var(--morado-oscuro);
+  margin-bottom: 24px;
+}
+
+.para-quien-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.para-quien-list li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--texto-secundario);
+}
+
+.para-quien-list li::before {
+  content: "•";
+  position: absolute;
+  left: 6px;
+  top: 0;
+  color: var(--morado-acento);
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   13. Sobre Mí
+   ========================================================================== */
+
+.section-sobre-mi {
+  background-color: var(--morado-oscuro);
+  color: var(--bg-crema);
+}
+
+.sobre-mi-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 52px;
+  align-items: center;
+}
+
+.sobre-mi-portrait {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 24px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
+}
+
+.sobre-mi-content h2 {
+  font-size: 38px;
+  color: var(--bg-crema);
+  margin-bottom: 20px;
+}
+
+.sobre-mi-content p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--bg-crema);
+  margin-bottom: 18px;
+}
+
+.instagram-link {
+  display: inline-block;
+  color: var(--bg-yellow);
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: underline;
+  margin-top: 8px;
+  transition: opacity 0.2s;
+}
+
+.instagram-link:hover {
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   14. Preguntas Frecuentes
+   ========================================================================== */
+
+.section-faq {
+  background-color: var(--bg-crema);
+}
+
+.section-faq h2 {
+  font-size: 38px;
+  color: var(--morado-oscuro);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--borde-tarjeta);
+  padding: 24px 0;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--borde-tarjeta);
+}
+
+.faq-question {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--morado-oscuro);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-icon {
+  font-size: 22px;
+  color: var(--morado-acento);
+  font-weight: 400;
+  transition: transform 0.25s ease;
+  line-height: 1;
+}
+
+details[open] .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--texto-secundario);
+  margin-top: 14px;
+}
+
+/* ==========================================================================
+   15. Cierre (id="agenda")
+   ========================================================================== */
+
+.section-cierre {
+  background-color: var(--bg-yellow);
+  text-align: center;
+}
+
+.section-cierre h2 {
+  font-size: 40px;
+  color: var(--morado-footer);
+  margin-bottom: 16px;
+}
+
+.section-cierre p {
+  font-size: 19px;
+  color: #3A2F4C;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.section-cierre .btn-group {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.section-cierre .limit-text {
+  font-size: 15px;
+  color: var(--morado-footer);
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   16. Pie de Página (Footer)
+   ========================================================================== */
+
+.site-footer {
+  background-color: var(--morado-footer);
+  color: var(--lila-claro);
+  font-size: 14px;
+  line-height: 1.65;
+  padding-top: 56px;
+  padding-bottom: 48px;
+}
+
+.footer-disclaimer {
+  margin-bottom: 28px;
+}
+
+.footer-disclaimer strong {
+  color: var(--blanco);
+}
+
+.footer-links-line {
+  border-top: 1px solid rgba(229, 218, 242, 0.15);
+  padding-top: 24px;
+  text-align: center;
+  color: var(--lila-claro);
+}
+
+.footer-links-line a {
+  color: var(--bg-yellow);
+  text-decoration: underline;
+}
+
+.footer-links-line a:hover {
+  color: var(--blanco);
+}
+
+/* ==========================================================================
+   Páginas Legales (Privacidad y Términos)
+   ========================================================================== */
+
+.legal-header {
+  padding-top: 36px;
+  padding-bottom: 20px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--verde-btn);
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: transform 0.15s ease;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  transform: translateX(-3px);
+}
+
+.legal-title {
+  font-size: 42px;
+  color: var(--morado-oscuro);
+  margin-bottom: 8px;
+}
+
+.legal-date {
+  font-size: 15px;
+  color: var(--texto-suave);
+  margin-bottom: 40px;
+}
+
+.legal-content section {
+  margin-bottom: 32px;
+}
+
+.legal-content h2 {
+  font-size: 24px;
+  color: var(--morado-oscuro);
+  margin-bottom: 12px;
+}
+
+.legal-content p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--texto-principal);
+  margin-bottom: 14px;
+}
+
+.legal-content ul {
+  list-style: none;
+  margin: 14px 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legal-content ul li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--texto-principal);
+}
+
+.legal-content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 6px;
+  top: 0;
+  color: var(--morado-acento);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.legal-content a {
+  color: var(--verde-btn);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Responsive / Celular (Anuncios Instagram y Facebook)
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-image-wrap {
+    order: -1;
+  }
+
+  .hero-arch-image {
+    max-width: 320px;
+    height: 400px;
+    border-top-left-radius: 160px;
+    border-top-right-radius: 160px;
+  }
+
+  .two-col-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .inscripcion-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .garantia-box {
+    grid-template-columns: 1fr;
+    padding: 36px 24px;
+    text-align: center;
+  }
+
+  .sobre-mi-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .sobre-mi-portrait {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+
+  .section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .section-hero {
+    padding-top: 28px;
+    padding-bottom: 56px;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .section-banda h2,
+  .section-factores h2,
+  .no-dietas-content h2,
+  .section-transformaciones h2,
+  .section-proceso h2,
+  .incluye-content h2,
+  .section-testimonios h2,
+  .sobre-mi-content h2,
+  .section-faq h2,
+  .section-cierre h2 {
+    font-size: 30px;
+  }
+
+  .section-bascula h2,
+  .garantia-content h2 {
+    font-size: 26px;
+  }
+
+  .legal-title {
+    font-size: 32px;
+  }
+
+  .factores-grid,
+  .proceso-grid,
+  .testimonios-grid,
+  .para-quien-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .transformacion-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .transformacion-flecha {
+    transform: rotate(90deg);
+    align-self: center;
+    margin: 4px 0;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .btn-nav {
+    width: 100%;
+  }
+
+  .banda-highlight-box {
+    padding: 24px;
+  }
+
+  .precio-card {
+    padding: 28px 20px;
+  }
+
+  .precio-amount {
+    font-size: 46px;
+  }
+}

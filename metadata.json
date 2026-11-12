@@ -1,0 +1,8 @@
+{
+  "name": "Calma y Serena Alma",
+  "description": "Proceso individual en línea con hipnosis y biodescodificación para bajar de peso sin dietas, trabajando la raíz emocional e inconsciente.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

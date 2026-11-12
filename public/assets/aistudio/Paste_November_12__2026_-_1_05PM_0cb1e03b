@@ -1,0 +1,393 @@
+Construye un sitio web estático de 3 páginas en HTML, CSS y JavaScript sin frameworks, listo para publicar en cualquier hosting:
+
+- `index.html` (landing page)
+- `privacidad.html` (política de privacidad)
+- `terminos.html` (términos y condiciones)
+
+Usa los archivos adjuntos con estos nombres exactos dentro de una carpeta `assets/`.
+
+## REGLAS IMPORTANTES
+
+1. Usa los textos EXACTAMENTE como están escritos aquí. No resumas, no reescribas, no agregues frases, no cambies palabras, no traduzcas.
+2. Escribe todo en español con tuteo ("tú"). Nunca uses "vos".
+3. No uses emojis ni imágenes de stock. Usa solo las imágenes adjuntas.
+4. No agregues contadores regresivos, ventanas emergentes (pop-ups) ni precios tachados.
+5. La página debe verse perfecta en celular (la mayoría del tráfico viene de anuncios de Instagram y Facebook): en pantallas angostas todas las columnas se apilan en una sola.
+6. Todos los enlaces externos se abren en una pestaña nueva (`target="_blank" rel="noopener"`).
+7. Usa HTML semántico y accesible: `<header>`, `<section>`, `<footer>`, textos alternativos en todas las imágenes, botones con buen contraste y de al menos 44 px de alto.
+
+## DISEÑO
+
+**Tipografías (Google Fonts):**
+- Títulos: Lora, peso 600 (y Lora itálica 500 para las citas).
+- Texto: Nunito Sans, pesos 400, 600 y 700.
+- Tamaño base del texto: 18 px, interlineado 1.6.
+
+**Colores:**
+- Fondo general crema: #FBF6EA
+- Fondo crema alterno: #F5EBD3
+- Amarillo crema (destacados): #F2DFA7
+- Morado oscuro (títulos y secciones oscuras): #3B2463
+- Morado muy oscuro (pie de página): #2E1A4F
+- Morado medio (tarjetas sobre fondo oscuro): #4A2F75
+- Morado acento (etiquetas pequeñas): #6B4A9E
+- Lila claro (texto suave sobre fondo oscuro): #E5DAF2
+- Texto principal: #2E2440
+- Texto secundario: #4A3F5C
+- Texto suave: #5C516E
+- Bordes de tarjetas: #EADFC4
+- Blanco: #FFFFFF
+- VERDE PARA TODOS LOS BOTONES: #1E7B47
+
+**Botones:** todos los botones son verdes. Botón principal: fondo #1E7B47, texto blanco, negrita, 18 px, esquinas totalmente redondeadas (forma de píldora), relleno 16 px × 28 px. Botón secundario: fondo transparente, borde de 2 px #1E7B47 y texto #1E7B47, misma forma.
+
+**Contenedor:** ancho máximo 1120 px, centrado, con 24 px de margen lateral. Las secciones tienen unos 88 px de espacio arriba y abajo.
+
+**Tarjetas:** fondo blanco, borde de 1 px #EADFC4, esquinas redondeadas de 20 px, relleno de 28 a 36 px.
+
+**Etiquetas pequeñas sobre los títulos:** 15 px, negrita, MAYÚSCULAS, espaciado entre letras 0.12em, color #6B4A9E (o #F2DFA7 sobre fondo oscuro).
+
+---
+
+## index.html — SECCIÓN POR SECCIÓN
+
+### 1. Barra superior
+Fondo #FBF6EA con una línea inferior de 1 px #EADFC4.
+- A la izquierda, en Lora 22 px color #3B2463: **Calma y Serena Alma**
+- A la derecha, botón secundario verde (16 px): **Llamada de valoración gratis** → https://calendly.com/calmayserenaalma/20min
+
+### 2. Portada (hero)
+Fondo #FBF6EA.
+
+Arriba, centrado y a todo el ancho:
+- Etiqueta: HIPNOSIS + BIODESCODIFICACIÓN · PROCESO INDIVIDUAL EN LÍNEA
+- Título H1 (Lora 52 px en escritorio, unos 34 px en celular, color #3B2463, centrado): **Baja de peso con hipnosis y biodescodificación y deja de vivir de dieta en dieta**
+
+Debajo, dos columnas (en celular se apilan):
+
+**Columna izquierda (más ancha):**
+
+Párrafo (20 px, color #4A3F5C), con una línea en blanco entre cada frase:
+> Calorías, porciones, macros, comparaciones, el miedo a que te juzguen…
+>
+> Cuando comer se vuelve una batalla en la cabeza, bajar de peso se siente como una montaña rusa.
+>
+> Vamos a la raíz emocional e inconsciente de ese caos para que bajar de peso deje de ser una guerra y por fin se sostenga.
+
+Lista de 3 beneficios, cada uno con un ícono de check verde (#1E7B47) dibujado en SVG, texto 18 px seminegrita color #3B2463:
+- Comer sin aguantar hambre, contar, pesar ni castigarte
+- Atender tus emociones sin que la comida sea una forma de apagarlas
+- Dejar atrás el efecto rebote
+
+Frase en itálica (17 px, #4A3F5C):
+> Un proceso amoroso y profundo. Sin promesas mágicas ni rápidas, pero con cambios reales que se quedan contigo.
+
+Dos botones uno al lado del otro:
+- Principal verde: **Quiero mi llamada de valoración gratis** → https://calendly.com/calmayserenaalma/20min
+- Secundario verde: **Inscribirme al proceso completo** → baja a la sección de precio (ancla `#inscripcion`)
+
+Debajo de los botones (15 px, #5C516E):
+> Videollamada de 20 minutos para conocer el proceso y ver si es para ti. Sin compromiso.
+
+Y en negrita color #6B4A9E (15 px):
+> Acompaño solo a 10 mujeres al mes: cada parte del proceso es personalizada y tienes soporte por WhatsApp entre sesiones.
+
+**Columna derecha:** imagen `assets/01-portada-naty.jpg` con forma de arco (esquinas superiores muy redondeadas, 200 px, e inferiores de 24 px), alto 520 px, recorte `object-fit: cover` centrado en la cara (`object-position: center 25%`). Texto alternativo: "Naty, hipnoterapeuta y terapeuta en biodescodificación, sonriendo". En celular, que mantenga la proporción y se vea la cara completa.
+
+### 3. Banda gástrica virtual
+Fondo morado oscuro #3B2463, texto crema #FBF6EA. Columna centrada de máximo 780 px.
+
+- Título H2 centrado (Lora 40 px, #FBF6EA): **Una banda gástrica virtual para comer menos sin pelear contra el hambre**
+- Subtítulo centrado (20 px, #E5DAF2): La misma idea de la cirugía, pero con hipnosis y sin bisturí.
+- Párrafo (19 px): En las sesiones de hipnosis trabajamos para que notes antes cuando ya estás satisfecha y para que un plato más pequeño empiece a ser suficiente. Sin contar, sin pesar, sin vivir con hambre.
+- Párrafo (19 px): Ahora, seamos honestas: llenarte más rápido ayuda, pero no lo resuelve todo. Puedes tener el estómago lleno y, a las 10 de la noche, después de un día pesado, seguir buscando el helado. Eso no es hambre. Y es justo ahí donde este proceso va más lejos.
+
+Recuadro destacado (fondo amarillo #F2DFA7, texto #2E1A4F, esquinas 24 px, relleno 36 px):
+- Subtítulo (Lora 26 px): **Si no se trata sólo de comer menos, ¿entonces de qué?**
+- Párrafo (18 px): Con hipnosis y biodescodificación trabajamos las emociones que disparan los antojos, las creencias que te tienen saltando de dieta en dieta y lo que, desde la biodescodificación, puede estar haciendo que tu cuerpo se aferre al peso: una necesidad inconsciente de protección, una creencia de escasez que te lleva a reservar para las vacas flacas, un deseo oculto de hacerte grande para ser vista, y otras que vamos a explorar en tu proceso individual.
+- En negrita (18 px): **La banda se ocupa del hambre. El trabajo terapéutico, de todo lo demás.**
+
+Recuadro de datos (fondo #4A2F75, esquinas 16 px, relleno 24 px):
+- Párrafo (17 px): Y no es solo mi experiencia. Incluso con una banda gástrica física, solo cerca de la mitad de las personas mantiene sus resultados. No porque su efecto mecánico cambie de una persona a otra, sino porque en el peso influyen muchos otros factores, y la banda solo actúa sobre el hambre.
+- Párrafo (17 px): Con los medicamentos pasa algo parecido: en un ensayo clínico con semaglutida, las personas recuperaron en promedio dos tercios del peso perdido durante el año siguiente a dejar el tratamiento.
+- Fuentes (14 px, #E5DAF2): Buchwald H y cols. Bariatric surgery: a systematic review and meta-analysis. JAMA, 2004; 292(14): 1724–1737. Wilding JPH y cols. Diabetes, Obesity and Metabolism, 2022; 24(8): 1553–1564. Ensayo STEP 1, extensión.
+
+### 4. Factores que influyen en el peso
+Fondo #FBF6EA.
+- Título H2 (Lora 38 px, #3B2463): **El peso no depende de una sola cosa**
+- Párrafo (#4A3F5C): Aunque comas bien, en tu peso influyen muchas cosas a la vez. Estas son las principales y así las abordamos en el proceso.
+
+Tres tarjetas en fila (se apilan en celular):
+
+Tarjeta 1 (blanca):
+- Título (20 px, #6B4A9E): Biológicos y metabólicos
+- Texto: Insulina, tiroides, hormonas del hambre y la saciedad, microbiota, inflamación, masa muscular, genética y epigenética, medicamentos y condiciones médicas.
+- Nota en negrita (15 px, #5C516E): Influyen en tu proceso y los tenemos presentes.
+
+Tarjeta 2 (blanca):
+- Título (20 px, #6B4A9E): Estilo de vida y entorno
+- Texto: Calidad del sueño, niveles de estrés, alteraciones del ritmo circadiano y el ambiente en el que vives y comes.
+- Nota en negrita (15 px, verde #1E7B47): Los trabajamos como complemento.
+
+Tarjeta 3 (DESTACADA: fondo #3B2463, texto crema):
+- Título (20 px, #F2DFA7): Emocionales e inconscientes
+- Texto: Creencias, emociones, la información de tu inconsciente y algunos hábitos que se repiten aunque no quieras.
+- Nota en negrita (15 px, #F2DFA7): Nuestro foco principal.
+
+### 5. No te voy a decir qué comer
+Fondo #F5EBD3. Dos columnas (se apilan en celular).
+
+**Columna izquierda:**
+- Título H2 (Lora 38 px, #3B2463): **No te voy a decir qué ni cuándo comer**
+- Párrafo: Aquí no hay dietas, ni listas de alimentos prohibidos, ni conteo de calorías. El objetivo es una alimentación intuitiva: comer lo suficiente para que tu cuerpo funcione bien, escuchando tus señales de hambre y saciedad.
+- Párrafo: Con la hipnosis trabajamos los antojos, los hábitos y las creencias que se instalaron en tu inconsciente. Con la biodescodificación exploramos las razones por las que tu inconsciente se aferra a acumular grasa. Por ejemplo, una mujer que vivió abuso en su infancia puede, sin saberlo, sostener un peso que su inconsciente vive como protección frente a otro peligro como ese.
+- Párrafo: En algún momento esas razones fueron válidas y ayudaron a sobrevivir. Ya es hora de reprogramar las que apliquen para ti.
+- Párrafo: Cuando entiendes el origen de tu comportamiento, reprogramas la creencia que te lleva a él y decides actuar diferente, aumenta la probabilidad de que los cambios se sostengan en el tiempo.
+
+**Columna derecha — marco de videollamada (hecho con HTML y CSS, no es una imagen):**
+- Un marco con fondo #2E1A4F, esquinas 24 px, relleno 14 px.
+- Dentro, una "pantalla" con proporción 4:3 y esquinas 14 px que muestra `assets/02-sesion-en-linea.jpg` (recorte cover, `object-position: 45% 40%`).
+- Sobre la imagen, abajo a la izquierda, una etiqueta oscura semitransparente (fondo rgba(20,12,36,0.7), texto blanco 13 px negrita, esquinas 8 px): **Naty · Sesión en línea**
+- Arriba a la derecha, un recuadro pequeño de 92 × 116 px (fondo #EDE3F7, borde 2 px #FBF6EA, esquinas 10 px) con un ícono de silueta de persona en línea (SVG, trazo #6B4A9E) y debajo el texto **Tú** (13 px negrita, #4A2D78).
+- Debajo de la pantalla, centrados, tres botones circulares decorativos de 40 px: micrófono y cámara (fondo #4A2F75, íconos en línea color crema) y uno rojo más ancho para colgar (fondo #C8423A, ícono de teléfono blanco).
+- Todo el marco lleva `role="img"` y `aria-label="Ilustración de una sesión en línea por videollamada con Naty"`.
+
+### 6. Transformaciones
+Fondo #FBF6EA.
+- Título H2 (Lora 38 px, #3B2463): **Del caos a la comprensión para elegir mejor**
+- Párrafo: Cada proceso es distinto, pero estas son las transformaciones en las que trabajamos juntas.
+
+Cuatro filas, cada una en una tarjeta blanca horizontal. A la izquierda el "antes" en color suave (#5C516E), en el centro una flecha → en morado #6B4A9E, y a la derecha el "después" en negrita (#3B2463). En celular la flecha y el "después" bajan debajo del "antes".
+1. La comida como la forma más rápida de calmarse → **Otras herramientas para gestionar lo que sientes**
+2. Culpa después de comer → **Paz mental frente a la comida**
+3. Antojos que parecen tener vida propia → **Entender qué te piden y poder elegir**
+4. Empezar de cero cada lunes con pura fuerza de voluntad → **Cambios que nacen desde adentro y se sostienen**
+
+### 7. La báscula
+Franja con fondo amarillo #F2DFA7, texto centrado, máximo 760 px.
+- Título H2 (Lora 34 px, #2E1A4F): **La báscula no es la única medida de progreso**
+- Párrafo (#3A2F4C): El número cambia de un día para otro, con el músculo, la hidratación, el descanso, la retención de líquidos, contenido intestinal, fluctuación hormonal... Por eso nos enfocamos más en cómo te sientes, cómo te queda la ropa y la tranquilidad con la que te sientas a la mesa.
+
+### 8. Cómo funciona el proceso
+Fondo #FBF6EA.
+- Título H2 (Lora 38 px, #3B2463): **Cómo funciona el proceso**
+
+Tres tarjetas blancas en fila, cada una con un número grande arriba (Lora 40 px, #6B4A9E):
+
+- **1** — Título: Entrevista — Texto: Nos conocemos, entiendo tu historia y validamos juntas si este proceso es para ti.
+- **2–5** — Título: Cuatro sesiones de trabajo — Texto: Hipnosis y biodescodificación, diseñadas para ti. Cada sesión dura alrededor de una hora. Y escuchas una hipnosis personalizada todos los días.
+- **+1** — Título: Sesión extra si la necesitas — Texto: No todas la necesitan, pero está incluida por si algún aspecto pide más trabajo.
+
+Debajo (16 px, #5C516E): 100% en línea, desde tu casa. Solo necesitas un espacio cómodo y sin interrupciones, durante cada sesión.
+
+### 9. Qué incluye, bonos y precio (`id="inscripcion"`)
+Fondo morado oscuro #3B2463, texto crema. Dos columnas (se apilan en celular).
+
+**Columna izquierda:**
+- Título H2 (Lora 38 px, #F2DFA7): **Todo lo que incluye tu proceso**
+- Lista con viñetas:
+  - Sesión informativa gratuita de 20 minutos
+  - De 4 a 5 sesiones individuales en línea de alrededor de una hora
+  - Audios de hipnosis personalizados para escuchar en casa
+  - Audios subliminales si algún aspecto está costando más
+  - Guías de acompañamiento, cuestionario biodescodificación, ayudas visuales y plantilla de registro de hábitos.
+  - Soporte por WhatsApp para dudas o comentarios, de lunes a viernes de 9:00 a. m. a 2:00 p. m.
+- Subtítulo (Lora 28 px, #F2DFA7): **Y además, de regalo**
+- Tres recuadros (fondo #4A2F75, esquinas 14 px), cada uno con título en negrita y descripción en #E5DAF2 (16 px):
+  - **Bono 1 · Masterclass regulación del sistema nervioso** — Herramientas cortas para volver a la calma cuando la emoción aprieta.
+  - **Bono 2 · Guía de gestión emocional** — Formas de reconocer, nombrar y atender lo que sientes sin pasar por la comida.
+  - **Bono 3 · Diccionario de los conflictos del sobrepeso** — Los conflictos que la biodescodificación relaciona con el sobrepeso, explicados de forma simple y fácil de entender.
+
+**Columna derecha — tarjeta de precio** (fondo crema #FBF6EA, texto #2E2440, esquinas 24 px, relleno 36 px):
+- Etiqueta: PROCESO COMPLETO
+- Precio (Lora 56 px, #3B2463): **390 USD**
+- Texto (15 px, #5C516E): O su equivalente en tu moneda. Pago seguro con Hotmart, con las cuotas que Hotmart te ofrezca.
+- Botón principal verde a todo el ancho de la tarjeta: **Quiero empezar mi proceso** → https://pay.hotmart.com/R108464864N
+- Separador con línea punteada (#D8C9A6). Debajo, centrado:
+  - En negrita (#3B2463): ¿Estás en Colombia?
+  - Texto (16 px): Paga **1.200.000 COP** por transferencia con llave Bre-B.
+  - Recuadro blanco con borde #EADFC4, en negrita: Llave: 305 316 1010
+  - Imagen `assets/05-qr-breb.png`, 200 px de ancho. Texto alternativo: "Código QR Bre-B para pagar 1.200.000 COP a Natalia Ojeda".
+  - Texto (15 px): Envíame el comprobante por WhatsApp al **305 316 1010** y agendamos tu sesión informativa. → El número es un enlace verde a: https://wa.me/573053161010?text=Hola%20Naty%2C%20te%20env%C3%ADo%20el%20comprobante%20de%20pago%20por%20Bre-B
+- Enlace de texto verde en negrita, centrado: **Prefiero hablar primero (20 min gratis)** → https://calendly.com/calmayserenaalma/20min
+- Texto centrado (15 px, #5C516E): Quedan 4 de 10 cupos.
+
+### 10. Garantía
+Fondo #FBF6EA. Un recuadro blanco centrado (máximo 900 px, borde 2 px #F2DFA7, esquinas 28 px, relleno 48 px) con dos columnas (se apilan en celular):
+- Izquierda: imagen `assets/04-sello-garantia.jpg`, 260 px de ancho. Texto alternativo: "Sello de garantía incondicional de 7 días".
+- Derecha:
+  - Título H2 (Lora 34 px, #3B2463): **Tu dinero está protegido**
+  - Frase grande en negrita (20 px, #3B2463): Empieza con tranquilidad: tienes 7 días de garantía.
+  - Párrafo: En esa primera semana tenemos tu sesión informativa y tu entrevista. Me haces todas tus preguntas, conozco tu historia y lo que quieres lograr, y las dos definimos si este proceso es para ti.
+  - Párrafo: Si vemos que no es el acompañamiento adecuado para ti en este momento, te devuelvo el 100% del dinero por el mismo medio con el que pagaste.
+
+### 11. Testimonios
+Fondo #F5EBD3.
+- Título H2 (Lora 38 px, #3B2463): **Lo que cuentan quienes ya hicieron su proceso**
+
+Tres tarjetas blancas centradas en fila (máximo 340 px de ancho cada una; en celular se apilan). Cada tarjeta tiene relleno de 14 px y el nombre centrado debajo (15 px negrita, #5C516E):
+1. Video `assets/07-testimonio-cata.mp4` con imagen de portada `assets/07-testimonio-cata-portada.jpg`, proporción vertical 9:16, con controles, `playsinline`, `preload="none"`, esquinas 12 px. Nombre: **Cata**
+2. Video `assets/08-testimonio-mile.mp4` con portada `assets/08-testimonio-mile-portada.jpg`, mismas características. Nombre: **Mile**
+3. Imagen `assets/06-testimonio-dani.jpg` (captura de WhatsApp, alto automático, esquinas 12 px). Texto alternativo: "Conversación de WhatsApp de Dani: el pan en 0 y el hambre 10 de 10, de no tanta hambre". Nombre: **Dani · por WhatsApp**
+
+Debajo (14 px, #5C516E): Testimonios reales compartidos con autorización. Cada proceso es único y los resultados varían de una persona a otra.
+
+### 12. Para quién es
+Fondo #FBF6EA. Dos tarjetas blancas lado a lado (se apilan en celular).
+
+Tarjeta 1:
+- Título (Lora 28 px, #3B2463): **Este proceso es para ti si…**
+- Viñetas:
+  - Eres una mujer adulta y quieres entender qué hay detrás de tu relación con la comida.
+  - Sientes que no tienes todo el control con respecto a la alimentación.
+  - Buscas un cambio que se sostenga, no un resultado rápido.
+  - Estás dispuesta a mirar hacia adentro y comprometerte con tu proceso.
+
+Tarjeta 2:
+- Título (Lora 28 px, #3B2463): **No es para ti si…**
+- Viñetas:
+  - Buscas bajar muchos kilos en pocas semanas.
+  - Tienes una condición médica que influye en tu peso, como alteraciones de la tiroides u hormonales, resistencia a la insulina o diabetes. Este proceso no la trata; consulta primero a tu médico.
+  - Tienes o has tenido un trastorno de la conducta alimentaria y no cuentas con acompañamiento especializado.
+  - Esperas que alguien más haga el trabajo por ti.
+
+### 13. Sobre mí
+Fondo morado oscuro #3B2463, texto crema. Dos columnas (se apilan en celular):
+- Izquierda: imagen `assets/03-sobre-mi-retrato.jpg`, máximo 380 px de ancho, proporción 3:4, recorte cover centrado en la cara (`object-position: center 20%`), esquinas 24 px. Texto alternativo: "Retrato de Naty, hipnoterapeuta y terapeuta en biodescodificación".
+- Derecha:
+  - Etiqueta (#F2DFA7): SOBRE MÍ
+  - Título H2 (Lora 38 px, #FBF6EA): **Hola, soy Naty**
+  - Párrafo: Soy hipnoterapeuta y terapeuta en biosanación emocional y biodescodificación.
+  - Párrafo: Yo también viví una relación difícil con la comida. Por eso sé lo que vale encontrar la raíz: la emoción y las creencias que nos llevan a actuar de cierta manera frente al plato. Y sobre todo una manera diferente de actuar y relacionarnos con la alimentación.
+  - Párrafo: Hoy sigo trabajando en mí. Estoy haciendo mi propio proceso de hipnosis y lo estoy compartiendo en Instagram, paso a paso. Te dejo aquí mi cuenta por si quieres más información de tu hipnoterapeuta.
+  - Enlace en negrita color #F2DFA7: **Mira mi proceso en Instagram** → https://www.instagram.com/reel/DfGB_UsBFq0/
+
+### 14. Preguntas frecuentes
+Fondo #FBF6EA, columna centrada de máximo 820 px.
+- Título H2 (Lora 38 px, #3B2463): **Preguntas frecuentes**
+
+Lista de preguntas (título 19 px en #3B2463, respuesta en #4A3F5C, separadas por una línea de 1 px #EADFC4). Pueden mostrarse abiertas o como acordeón que se despliega al tocar, pero las respuestas deben ser legibles sin JavaScript:
+
+1. **¿Cuántos kilos voy a bajar?** — No prometo una cifra. El peso depende de muchos factores y la báscula no es la única medida de avance. Lo que trabajamos es la raíz emocional e inconsciente, que es lo que ayuda a sostener los cambios.
+2. **¿Me vas a dar una dieta?** — No. No hablamos de qué ni cuándo comer. Si necesitas un plan de alimentación, te puedo recomendar una excelente nutricionista.
+3. **¿Voy a perder el control durante la hipnosis?** — No. Durante la hipnosis estás consciente y relajada, y puedes salir de ese estado cuando quieras.
+4. **¿Funciona en línea?** — Sí. Solo necesitas buena conexión, audífonos y un espacio tranquilo donde nadie te interrumpa durante la hora de sesión.
+5. **¿Y si compro y luego siento que no es lo que estoy buscando?** — Si en tus primeros 7 días decides o decidimos entre las dos que este no es el acompañamiento adecuado para ti en este momento, te devuelvo el 100% de tu dinero por el mismo medio con el que pagaste.
+6. **¿Puedo pagar en cuotas?** — Si compras por Hotmart, puedes usar las opciones de cuotas que ofrezca según tu país y tu medio de pago.
+7. **¿Cómo es el seguimiento por WhatsApp?** — El WhatsApp es un canal de soporte para cuando tú tengas dudas o quieras comentarme algo, de lunes a viernes de 9:00 a. m. a 2:00 p. m.
+
+### 15. Cierre (`id="agenda"`)
+Fondo amarillo #F2DFA7, todo centrado, máximo 760 px.
+- Título H2 (Lora 40 px, #2E1A4F): **¿Hablamos 20 minutos?**
+- Párrafo (#3A2F4C): En una llamada gratuita te explico cómo funciona el proceso, resolvemos tus dudas y vemos juntas si es para ti. Sin compromiso.
+- Dos botones:
+  - Principal verde: **Agendar mi sesión gratuita** → https://calendly.com/calmayserenaalma/20min
+  - Secundario verde: **Ya estoy lista, quiero empezar** → ancla `#inscripcion`
+- Texto (15 px): Solo 10 procesos al mes.
+
+### 16. Pie de página
+Fondo #2E1A4F, texto #E5DAF2, 14 px.
+- Párrafo: **Aviso importante:** este acompañamiento terapéutico complementario no reemplaza la atención médica, nutricional ni psicológica, y no diagnostica ni trata enfermedades. Te recomendamos una valoración médica antes de empezar. Si tienes una condición médica o un trastorno de la conducta alimentaria, consulta a un profesional de la salud. La hipnosis y la biodescodificación no son tratamientos médicos. Los resultados varían de una persona a otra. Servicio dirigido a personas mayores de 18 años.
+- Línea final: © 2026 Calma y Serena Alma · Política de privacidad · Términos y condiciones → "Política de privacidad" enlaza a `privacidad.html` y "Términos y condiciones" a `terminos.html`, ambos en color #F2DFA7.
+
+---
+
+## privacidad.html
+
+Mismo estilo (fondo #FBF6EA, Lora para títulos, Nunito Sans para texto, columna centrada de máximo 780 px). Arriba, un enlace verde "← Volver a la página principal" que lleva a `index.html`. Mismo pie de página que la landing.
+
+**Título H1:** Política de privacidad y tratamiento de datos personales
+**Debajo (15 px, #5C516E):** Última actualización: 12 de noviembre de 2026
+
+**1. Quién es responsable de tus datos**
+Natalia Ojeda, quien ofrece sus servicios bajo el nombre Calma y Serena Alma, con domicilio en Medellín, Colombia, es la responsable del tratamiento de tus datos personales. Puedes escribir a calmayserenaalma@gmail.com o al WhatsApp 305 316 1010.
+Esta política se rige por la Ley 1581 de 2012 y el Decreto 1377 de 2013 de Colombia sobre protección de datos personales.
+
+**2. Qué datos recogemos**
+- Datos de contacto: nombre, correo electrónico y número de teléfono, cuando agendas tu sesión informativa en Calendly o nos escribes por WhatsApp.
+- Datos de pago: los pagos con tarjeta los procesa Hotmart; nosotras no vemos ni guardamos los datos de tu tarjeta. Si pagas por transferencia Bre-B, guardamos el comprobante que nos envías.
+- Información que compartes en tu proceso: tus hábitos, emociones, historia personal y lo que quieres lograr, para diseñar tu acompañamiento.
+- Datos de navegación: usamos el píxel de Meta y cookies para medir cómo funcionan nuestros anuncios y mostrar publicidad relevante. Puedes bloquear las cookies desde tu navegador y gestionar tus preferencias de anuncios desde tu cuenta de Facebook o Instagram.
+
+**3. Datos sensibles**
+Parte de lo que compartes en las sesiones, como información sobre tu salud o tus emociones, es un dato sensible según la ley. No estás obligada a compartirlo, y lo usamos solo para acompañar tu proceso. Al iniciar el proceso te pediremos tu autorización expresa para tratarlo.
+
+**4. Para qué usamos tus datos**
+- Agendar y realizar tu sesión informativa y tus sesiones.
+- Diseñar tus audios de hipnosis y el material de tu proceso.
+- Darte soporte por WhatsApp.
+- Gestionar pagos y reembolsos.
+- Enviarte información sobre el servicio, solo si nos autorizas.
+
+**5. Con quién compartimos tus datos**
+No vendemos ni cedemos tus datos. Solo pasan por las herramientas que hacen posible el servicio: Calendly (agenda), Hotmart (pagos), WhatsApp (comunicación), Meta (medición de anuncios) y la plataforma de videollamada que usamos en las sesiones. Cada una tiene su propia política de privacidad.
+
+**6. Confidencialidad**
+Lo que compartes en tus sesiones es confidencial. Solo usamos tu testimonio, tu nombre o tu imagen en publicidad si nos das tu autorización por escrito.
+
+**7. Tus derechos**
+Puedes en cualquier momento conocer, actualizar y rectificar tus datos, pedir prueba de tu autorización, saber cómo los usamos, revocar tu autorización o pedir que los eliminemos, y presentar quejas ante la Superintendencia de Industria y Comercio. Para ejercer estos derechos, escríbenos a calmayserenaalma@gmail.com. Respondemos consultas en un máximo de 10 días hábiles y reclamos en un máximo de 15 días hábiles.
+
+**8. Cuánto tiempo guardamos tus datos**
+Mientras dure tu proceso y el tiempo necesario para cumplir obligaciones legales o contables. Después los eliminamos.
+
+**9. Cambios a esta política**
+Si cambiamos esta política, publicaremos la nueva versión en esta página con su fecha de actualización.
+
+---
+
+## terminos.html
+
+Mismo estilo que privacidad.html, con el enlace "← Volver a la página principal" y el mismo pie de página.
+
+**Título H1:** Términos y condiciones
+**Debajo (15 px, #5C516E):** Última actualización: 12 de noviembre de 2026
+
+**1. El servicio**
+Calma y Serena Alma, de Natalia Ojeda, ofrece un proceso individual en línea que usa la hipnosis y la biodescodificación como herramientas para acompañar a mujeres que quieren bajar de peso y transformar su relación con la comida. El proceso incluye una sesión informativa gratuita, de 4 a 5 sesiones individuales por videollamada, audios de hipnosis personalizados, el material de apoyo descrito en la página y soporte por WhatsApp de lunes a viernes de 9:00 a. m. a 2:00 p. m.
+
+**2. Qué no es este servicio**
+Es un acompañamiento terapéutico complementario. No es un tratamiento médico, nutricional ni psicológico, no diagnostica ni trata enfermedades y no reemplaza la atención de profesionales de la salud. No incluye dietas ni planes de alimentación. Cada proceso es distinto y no garantizamos una cantidad de peso ni un plazo determinado.
+
+**3. Quién puede tomarlo**
+Personas mayores de 18 años. Si tienes una condición médica que influye en tu peso o un trastorno de la conducta alimentaria, consulta antes a un profesional de la salud. Al tomar el servicio confirmas que la información que compartes es verdadera.
+
+**4. Precio y pago**
+El proceso completo cuesta 390 USD (o su equivalente en tu moneda) a través de Hotmart, con las cuotas que Hotmart ofrezca, o 1.200.000 COP por transferencia con llave Bre-B para pagos desde Colombia. Los pagos por Hotmart se rigen también por sus propios términos de compra.
+
+**5. Garantía y reembolsos**
+Tienes 7 días de garantía desde la compra. En ese tiempo tenemos tu sesión informativa y tu entrevista. Si entre las dos decidimos que no es el acompañamiento adecuado para ti en este momento, te devolvemos el 100% de tu dinero por el mismo medio con el que pagaste. Pasados los 7 días no hay reembolsos, porque a partir de ahí tus sesiones y tus audios se diseñan solo para ti.
+
+**6. Agenda y reprogramaciones**
+Las sesiones se agendan con anticipación, normalmente con una semana entre una y otra. Si necesitas reprogramar, avísanos con al menos 24 horas de anticipación. Si no avisas a tiempo o no te presentas, la sesión se considera tomada. Ante una situación de fuerza mayor, lo conversamos.
+
+**7. Tu compromiso**
+Los resultados dependen en gran parte de tu participación. Te comprometes a asistir a tus sesiones desde un espacio tranquilo y sin interrupciones, con buena conexión y audífonos, y a escuchar tus audios como te lo indiquemos.
+
+**8. Uso del material**
+Los audios, guías y demás material son para tu uso personal. No puedes compartirlos, venderlos ni publicarlos.
+
+**9. Confidencialidad y datos**
+Lo que compartes en tus sesiones es confidencial. El tratamiento de tus datos se explica en nuestra política de privacidad (enlace a `privacidad.html`).
+
+**10. Ley aplicable y contacto**
+Estos términos se rigen por las leyes de Colombia. Para cualquier duda o reclamo, escríbenos a calmayserenaalma@gmail.com o al WhatsApp 305 316 1010.
+
+---
+
+## PÍXEL DE META
+
+En el `<head>` de las 3 páginas, deja preparado el código base del píxel de Meta con un marcador visible `TU_ID_DE_PIXEL` para reemplazarlo después. Agrega estos eventos:
+- `Lead` cuando alguien toque cualquier botón que lleve a Calendly.
+- `InitiateCheckout` cuando alguien toque el botón que lleva a Hotmart.
+- `Contact` cuando alguien toque el enlace de WhatsApp.
+
+## SEO BÁSICO
+
+En `index.html`:
+- `<title>`: Calma y Serena Alma — Baja de peso con hipnosis y biodescodificación
+- `<meta name="description">`: Proceso individual en línea con hipnosis y biodescodificación para bajar de peso sin dietas, trabajando la raíz emocional e inconsciente. Sesión informativa gratuita de 20 minutos.
+- `lang="es"` en las tres páginas.
+- Etiquetas Open Graph con `assets/01-portada-naty.jpg` como imagen para cuando se comparta el enlace.
+
+Cuando termines, muéstrame la vista previa en escritorio y en celular.
