@@ -8,15 +8,15 @@ export default defineConfig(() => {
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(import.meta.dirname, '.'),
       },
     },
     build: {
       rollupOptions: {
         input: {
-          main: path.resolve(__dirname, 'index.html'),
-          privacidad: path.resolve(__dirname, 'privacidad.html'),
-          terminos: path.resolve(__dirname, 'terminos.html'),
+          main: path.resolve(import.meta.dirname, 'index.html'),
+          privacidad: path.resolve(import.meta.dirname, 'privacidad.html'),
+          terminos: path.resolve(import.meta.dirname, 'terminos.html'),
         },
       },
     },
